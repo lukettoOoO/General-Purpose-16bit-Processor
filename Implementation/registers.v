@@ -1,5 +1,6 @@
 `timescale 1ns/1ps
 
+//register file
 module registers(
   input wire [2:0] s_in,     //selection bits
   input wire [2:0] s_out,
