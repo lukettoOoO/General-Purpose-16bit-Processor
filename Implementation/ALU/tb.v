@@ -68,8 +68,8 @@ module tb_ALU;
     
 	#10
     op = 5'd2;
-    A  = 16'd20;
-    B  = 16'd3;
+    A  = -16'd20;
+    B  = 16'd5;
     start = 1;
     $display("3.OP: DIV STARTED");
     
@@ -80,7 +80,7 @@ module tb_ALU;
     #10;
 
     #10;
-    $display("3.OP: DIV DONE | A: %d | B: %d | Result: %d", A, B, result);
+    $display("3.OP: DIV DONE | A: %d | B: %d | Result: %d | Z:%d N:%d C:%d V:%d", $signed(A), B, $signed(result), Z, N, C, V);
 
     
     
@@ -101,7 +101,7 @@ module tb_ALU;
     #10; 
     
     op = 5'd5;  
-    A  = 16'd20;
+    A  = -16'd8;
     B  = 16'd3;
     start = 1;
     $display("6.OP: MOD STARTED");
@@ -111,18 +111,19 @@ module tb_ALU;
 
     wait(done_mod == 1);
     #10;
-    $display("6.OP: MOD DONE | A: %d | B: %d | Result: %d", A, B, result);
+    $display("6.OP: MOD DONE | A: %d | B: %d | Result: %d | Z: %d N: %d V: %d C: %d", $signed(A), B, $signed(result), Z, N, V, C);
     
      #10;
     op = 5'd6; 
     A  = 16'h8001;
     #10;
-    $display("7.OP: MOV | A: %h | Result: %h", A, result);
+    $display("7.OP: MOV | A: %d | Result: %d", A, result);
     
     #10;
     op = 5'd7;
-    A  = 16'd20;
-    B  = 16'd10;
+    A  = -16'd11;
+    B  = 16'd5;
+    #5
     start = 1;
     $display("8.OP: MUL STARTED");
     
@@ -131,7 +132,7 @@ module tb_ALU;
 
     wait(done_mul == 1);
     #10; 
-    $display("8.OP: MUL DONE | A: %d | B: %d | ResLow: %d | ResHigh: %d", A, B, result, result_high);
+    $display("8.OP: MUL DONE | A: %d | B: %d | ResLow: %d | ResHigh: %d | N: %d Z: %d V: %d C: %d", $signed(A), $signed(B), $signed(result), $signed(result_high), N, Z, V, C);
     
      #10
     op = 5'd8;
