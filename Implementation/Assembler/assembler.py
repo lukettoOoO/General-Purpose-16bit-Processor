@@ -176,7 +176,7 @@ def write_output_files(output_base_name, binary_strings):
             f.write(f"{bin_str}\n")
     print(f".txt file generated successfully: {txt_filename}")
 
-    #.bin file - binary file to be loaded into ROM
+    #.bin file - binary file to be loaded into memory
     bin_filename = output_base_name + ".bin"
     try:
         with open(bin_filename, 'wb') as f:
