@@ -65,6 +65,8 @@ def clean_line(line):
         line = line[:line.find(';')]
     return line.strip().upper()
 
+#besides cleaning whitespace and comments, this pass counts the lines
+#and stores at which address each label is located
 def pass_one(source_lines):
     """Build symbol table"""
     symbol_table = {}
@@ -90,7 +92,8 @@ def pass_one(source_lines):
             
     return symbol_table, instruction_lines
 
-
+#generates the binary code for each instruction
+#and substitutes labels with their addresses
 def pass_two(instruction_lines, symbol_table):
     """Generate the 16-bit binary code"""
     machine_code = []
