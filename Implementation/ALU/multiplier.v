@@ -40,8 +40,8 @@ module multiplier(
     .A(a), .B(A_reg), .cin(1'b0), .Sum(renew), .Z(), .N(), .C(carry), .V()
   );
 
-    always @(posedge clk or negedge rst)begin
-        if(!rst)
+    always @(posedge clk or posedge rst)begin
+        if(rst)
             busy <= 1'b0;
         else if(start)
             busy <= 1'b1;
@@ -49,15 +49,15 @@ module multiplier(
             busy <= 1'b0;
     end
 
-    always @(posedge clk or negedge rst)begin
-        if(!rst)
+    always @(posedge clk or posedge rst)begin
+        if(rst)
             busy_d <= 1'b0;
         else
             busy_d <= busy;
     end
 
-    always @(posedge clk or negedge rst)begin
-        if(!rst) begin
+    always @(posedge clk or posedge rst)begin
+        if(rst) begin
             A_reg <= 16'h0;
             B_reg <= 16'h0;
         end
@@ -69,8 +69,8 @@ module multiplier(
 
     end
 
-  always @(posedge clk or negedge rst)begin
-        if(!rst)
+  always @(posedge clk or posedge rst)begin
+        if(rst)
         {a, q} <= {32'h0};
 
         else if(start)
@@ -87,13 +87,17 @@ module multiplier(
         {a, q} <= {a, q};
     end
 
-    always @(posedge clk or negedge rst)begin
-        if(!rst)
+    always @(posedge clk or posedge rst)begin
+        if(rst)
             count <= 5'd0;
         else if(busy)
             count <= count + 5'd1;
         else
             count <= 5'd0;
     end
+    
+
+
+
 
 endmodule

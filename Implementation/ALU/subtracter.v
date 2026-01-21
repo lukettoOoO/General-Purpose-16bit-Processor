@@ -11,20 +11,12 @@ module subtracter(
 );
   
   wire [16:0] carry;
-  assign carry[0] = 1;
-    
-  genvar i;
-    generate
-        for (i = 0; i < 16; i = i + 1) begin : fac_loop
-            fac fa (
-                .x(A[i]),
-                .y(~B[i]),
-                .ci(carry[i]),
-                .z(dif[i]),
-                .co(carry[i+1])
-            );
-        end
-    endgenerate
+  wire [16:0] temp_res;
+  
+  assign temp_res = A + ~B + 1'b1;
+  assign dif = temp_res[15:0];
+  assign carry[16] = temp_res[16];
+  
   assign Z = (dif==16'b0);
   assign N = (dif[15]);
   assign C = carry[16];

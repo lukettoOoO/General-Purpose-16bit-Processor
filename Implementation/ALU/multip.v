@@ -21,8 +21,8 @@ module multip(
   wire [15:0] abs_B = b[15] ? (~b + 1'b1) : b;
 
     reg sign_final;
-    always @(posedge clk or negedge rst) begin
-        if (!rst) 
+    always @(posedge clk or posedge rst) begin
+        if (rst) 
             sign_final <= 1'b0;
         else if (start) 
           sign_final <= a[15] ^ b[15]; 

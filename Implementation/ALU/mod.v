@@ -19,8 +19,8 @@ module mod(
   wire [15:0] abs_b = b[15] ? (~b + 1'b1) : b;
 
   reg sign_remainder;
-  always @(posedge clk or negedge rst) begin
-      if (!rst) sign_remainder <= 1'b0;
+  always @(posedge clk or posedge rst) begin
+      if (rst) sign_remainder <= 1'b0;
       else if (start) sign_remainder <= a[15];
   end
 
