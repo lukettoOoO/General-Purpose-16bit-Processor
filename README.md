@@ -1,6 +1,6 @@
 # 8-Bit CPU Design & Simulation
 
-This repository contains the Verilog implementation of an 8-bit CPU, developed as a group project for the Introduction to Computer Systems (ITSC) course. The project encompasses the complete design of the processor architecture, a custom instruction set, an assembler, and a demonstration application (Pocket Calculator).
+This repository contains the Verilog implementation of an 8-bit CPU, developed as a group project for the Engineering and Testing of Computer Systems course. The project encompasses the complete design of the processor architecture, a custom instruction set, an assembler, and a demonstration application (Pocket Calculator).
 
 ## Project Overview
 
@@ -39,8 +39,7 @@ This project was a collaborative effort. Responsibilities were divided as follow
 ## Getting Started
 
 ### Prerequisites
-- [Icarus Verilog](http://iverilog.icarus.com/) for simulation.
-- [GTKWave](http://gtkwave.sourceforge.net/) (optional, for waveform viewing).
+- Icarus Verilog for simulation
 
 ### Running the Simulation
 
