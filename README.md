@@ -103,3 +103,6 @@ The project includes a C-based interface (`interface.c`) that allows you to inte
 -   **Calculate**: Press `ENTER` to run the simulation and see the result.
 -   **Clear**: Press `c` to reset inputs.
 -   **Quit**: Press `q` to exit.
+![Înregistrare ecran din 2026-02-19 la 17 40 13](https://github.com/user-attachments/assets/b54d37fb-d3f6-4ae8-a5cf-7c9a6ac5f1ad)
+
+
