@@ -1,7 +1,7 @@
 loading Program from calculator_prog.txt...
 WARNING: CPU_tb.v:32: $readmemb(calculator_prog.txt): Not enough words in the file for the requested range [0:1023].
 Mem[0] after load: 0466
-injecting Input: A=          1, B=          1, Cmd=          0 (to Addr 100,101,102)
+injecting Input: A=          1, B=          0, Cmd=          0 (to Addr 100,101,102)
 T=                   0 State= 0 PC=0000 IR=xxxx Bus=zzzz
 CU Tick: T=              105000 upc= 0 next_upc= 1
 T=              105000 State= 1 PC=0000 IR=xxxx Bus=0466
@@ -46,11 +46,11 @@ T=              295000 State= 2 PC=000e IR=0c65 Bus=0c65
 CU Tick: T=              305000 upc= 2 next_upc=30
 T=              305000 State=30 PC=000e IR=0c65 Bus=zzzz
 CU Tick: T=              315000 upc=30 next_upc=60
-T=              315000 State=60 PC=000e IR=0c65 Bus=0001
+T=              315000 State=60 PC=000e IR=0c65 Bus=0000
 CU Tick: T=              325000 upc=60 next_upc=36
-T=              325000 State=36 PC=000e IR=0c65 Bus=0001
+T=              325000 State=36 PC=000e IR=0c65 Bus=0000
 CU Tick: T=              335000 upc=36 next_upc= 0
-T=              335000 State= 0 PC=000e IR=0c65 Bus=0002
+T=              335000 State= 0 PC=000e IR=0c65 Bus=0001
 CU Tick: T=              345000 upc= 0 next_upc= 1
 T=              345000 State= 1 PC=000e IR=0c65 Bus=0867
 CU Tick: T=              355000 upc= 1 next_upc= 2
@@ -58,7 +58,7 @@ T=              355000 State= 2 PC=000f IR=0867 Bus=0867
 CU Tick: T=              365000 upc= 2 next_upc=20
 T=              365000 State=20 PC=000f IR=0867 Bus=zzzz
 CU Tick: T=              375000 upc=20 next_upc= 0
-T=              375000 State= 0 PC=000f IR=0867 Bus=0002
+T=              375000 State= 0 PC=000f IR=0867 Bus=0001
 CU Tick: T=              385000 upc= 0 next_upc= 1
 T=              385000 State= 1 PC=000f IR=0867 Bus=8020
 CU Tick: T=              395000 upc= 1 next_upc= 2
@@ -482,25 +482,25 @@ T=             2475000 State= 2 PC=0065 IR=0001 Bus=0001
 CU Tick: T=             2485000 upc= 2 next_upc= 0
 T=             2485000 State= 0 PC=0065 IR=0001 Bus=zzzz
 CU Tick: T=             2495000 upc= 0 next_upc= 1
-T=             2495000 State= 1 PC=0065 IR=0001 Bus=0001
+T=             2495000 State= 1 PC=0065 IR=0001 Bus=0000
 CU Tick: T=             2505000 upc= 1 next_upc= 2
-T=             2505000 State= 2 PC=0066 IR=0001 Bus=0001
+T=             2505000 State= 2 PC=0066 IR=0000 Bus=0000
 CU Tick: T=             2515000 upc= 2 next_upc= 0
-T=             2515000 State= 0 PC=0066 IR=0001 Bus=zzzz
+T=             2515000 State= 0 PC=0066 IR=0000 Bus=zzzz
 CU Tick: T=             2525000 upc= 0 next_upc= 1
-T=             2525000 State= 1 PC=0066 IR=0001 Bus=0000
+T=             2525000 State= 1 PC=0066 IR=0000 Bus=0000
 CU Tick: T=             2535000 upc= 1 next_upc= 2
 T=             2535000 State= 2 PC=0067 IR=0000 Bus=0000
 CU Tick: T=             2545000 upc= 2 next_upc= 0
 T=             2545000 State= 0 PC=0067 IR=0000 Bus=zzzz
 CU Tick: T=             2555000 upc= 0 next_upc= 1
-T=             2555000 State= 1 PC=0067 IR=0000 Bus=0002
+T=             2555000 State= 1 PC=0067 IR=0000 Bus=0001
 CU Tick: T=             2565000 upc= 1 next_upc= 2
-T=             2565000 State= 2 PC=0068 IR=0002 Bus=0002
+T=             2565000 State= 2 PC=0068 IR=0001 Bus=0001
 CU Tick: T=             2575000 upc= 2 next_upc= 0
-T=             2575000 State= 0 PC=0068 IR=0002 Bus=zzzz
+T=             2575000 State= 0 PC=0068 IR=0001 Bus=zzzz
 CU Tick: T=             2585000 upc= 0 next_upc= 1
-T=             2585000 State= 1 PC=0068 IR=0002 Bus=0000
+T=             2585000 State= 1 PC=0068 IR=0001 Bus=0000
 CU Tick: T=             2595000 upc= 1 next_upc= 2
 T=             2595000 State= 2 PC=0069 IR=0000 Bus=0000
 CU Tick: T=             2605000 upc= 2 next_upc= 0
@@ -2004,6 +2004,6 @@ T=            10085000 State= 1 PC=0162 IR=0000 Bus=0000
 CU Tick: T=            10095000 upc= 1 next_upc= 2
 T=            10095000 State= 2 PC=0163 IR=0000 Bus=0000
 simulation finished
-result at 103:     2
+result at 103:     1
 Result written to result.txt
 CPU_tb.v:76: $finish called at 10100000 (1ps)
