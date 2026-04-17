@@ -1,11 +1,11 @@
-# 8-Bit CPU Design & Simulation
+# 16-Bit CPU Design & Simulation
 
-This repository contains the Verilog implementation of an 8-bit CPU, developed as a group project for the Engineering and Testing of Computer Systems course. The project encompasses the complete design of the processor architecture, a custom instruction set, an assembler, and a demonstration application (Pocket Calculator).
+This repository contains the Verilog implementation of an 16-bit CPU, developed as a group project for the Engineering and Testing of Computer Systems course. The project encompasses the complete design of the processor architecture, a custom instruction set, an assembler, and a demonstration application (Pocket Calculator).
 
 ## Project Overview
 
-The goal of this project was to design and simulate a functional 8-bit CPU from scratch. The system includes:
-- 8-bit Data Bus and Address Bus
+The goal of this project was to design and simulate a functional 16-bit CPU from scratch. The system includes:
+- 16-bit Data Bus and Address Bus
 - General Purpose Registers
 - Arithmetic Logic Unit (ALU)
 - Control Unit (CU)
